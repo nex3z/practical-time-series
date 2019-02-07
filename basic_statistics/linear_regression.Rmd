@@ -1,0 +1,38 @@
+---
+title: "Linear Regression"
+output: html_notebook
+---
+
+
+```{r}
+help(co2)
+```
+
+```{r}
+plot(co2, main='Atmospheric Concentrations of CO2')
+```
+
+```{r}
+co2.lm = lm(co2 ~ time(co2))
+print(co2.lm)
+```
+
+```{r}
+plot(co2, main='Atmospheric Concentrations of CO2')
+abline(co2.lm)
+```
+```{r}
+co2.res = resid(co2.lm)
+hist(co2.res, main='Histogram of Residuals')
+```
+```{r}
+qqnorm(co2.res)
+qqline(co2.res)
+```
+```{r}
+plot(co2.res ~ time(co2), main='Residuals on Time')
+```
+
+```{r}
+plot(co2.res ~ time(co2), xlim=c(1960, 1963), main='Zoomed Residuals')
+```

@@ -1,0 +1,27 @@
+---
+title: "Inference"
+output: html_notebook
+---
+
+```{r}
+help(sleep)
+```
+
+```{r}
+sleep
+```
+
+```{r}
+plot(extra~group, data=sleep, main='Extra Sleep by Group')
+```
+
+```{r, results="hide"}
+attach(sleep)
+extra.1 = extra[group == 1]
+extra.2 = extra[group == 2]
+```
+
+```{r}
+t.test(extra.1, extra.2, paired = T, alternative = 'two.sided')
+```
+

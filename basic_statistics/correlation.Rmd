@@ -1,0 +1,18 @@
+---
+title: "Correlation"
+output: html_notebook
+---
+
+```{r}
+help(trees)
+```
+
+```{r}
+pairs(trees, pch = 21, bg=c('red'))
+```
+```{r}
+cov(trees)
+```
+```{r}
+cor(trees)
+```

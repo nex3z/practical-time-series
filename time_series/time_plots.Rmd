@@ -18,15 +18,13 @@ plot(flu, main='Monthly pneumonia and influenza deaths in the U.S.', ylab='Numbe
 ```
 ```{r}
 help(globtemp)
-plot(globtemp, main='Global Mean Land-Ocean Temperature Deviations', ylab='Temperature Deviations', xlab='Years', type='o')
+plot(globtemp, main='Global Mean Land-Ocean Temperature Deviations', ylab='Temperature Deviations', xlab='Years')
 ```
 ```{r}
 help(globtempl)
-plot(globtempl, main='Global Mean Land Temperature Deviations', ylab='Temperature Deviations', xlab='Years', type='o')
+plot(globtempl, main='Global Mean Land Temperature Deviations', ylab='Temperature Deviations', xlab='Years')
 ```
 ```{r}
 help(star)
 plot(star, main='Variable Star', ylab='Magnitude', xlab='Days')
 ```
-
-

@@ -1,0 +1,19 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+random_process = ts(rnorm(100))
+```
+
+```{r}
+plot(random_process)
+```
+```{r}
+(acf(random_process, type='covariance'))
+```
+```{r}
+(acf(random_process, main='Correlogram'))
+```
+

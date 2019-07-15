@@ -4,24 +4,26 @@ output: html_notebook
 ---
 
 ```{r}
-x = NULL
-x[1] = 0
-for (i in 2:1000) {
-  x[i] = x[i-1] + rnorm(1)
-}
+set.seed(42)
+```
 
-random_walk = ts(x)
-plot(random_walk, main='Random Walk')
-```
 ```{r}
-acf(random_walk)
+x <- NULL
+x[1] <- 0
+for (i in 2:200) {
+  x[i] <- x[i - 1] + rnorm(1)
+}
+x <- ts(x)
+plot(x, main="Random Walk")
+acf(x)
 ```
+
+
 ```{r}
-random_walk.diff = diff(random_walk)
-plot(random_walk.diff)
+x.diff <- diff(x)
+plot(x.diff, main="Random Walk Diff")
+acf(x.diff)
 ```
-```{r}
-acf(random_walk.diff)
-```
+
 
 

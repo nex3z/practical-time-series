@@ -1,0 +1,33 @@
+---
+title: "MA"
+output: html_notebook
+---
+
+MA(1)
+
+```{r}
+set.seed(42)
+e <- rnorm(200)
+ma.1 <- NULL
+for(i in 2:200) {
+  ma.1[i] <- e[i] + 0.7 * e[i - 1]
+}
+ma.1 <- ts(ma.1[2:200])
+
+plot(ma.1, main="MA(1)")
+acf(ma.1)
+```
+
+```{r}
+set.seed(42)
+e <- rnorm(200)
+ma.2 <- NULL
+for(i in 3:200) {
+  ma.2[i] <- e[i] + 0.6 * e[i - 1] + 0.4 * e[i - 2]
+}
+ma.2 <- ts(ma.2[3:200])
+
+plot(ma.2, main="MA(2)")
+acf(ma.2)
+```
+

@@ -1,0 +1,13 @@
+---
+title: "white_noise"
+output: html_document
+---
+
+```{r}
+set.seed(42)
+e <- ts(rnorm(200))
+plot(e, main="White Noise")
+```
+```{r}
+acf(e)
+```

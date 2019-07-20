@@ -1,0 +1,17 @@
+---
+title: "Yule-Walker Example"
+output: html_document
+---
+
+```{r}
+set.seed(42)
+ar <- arima.sim(n = 500, list(ar = c(1/3, 1/2)))
+acf(ar)
+```
+
+```{r}
+k = c(0:26)
+rho = (4 - 6^.5) / 8 * ((2 - 76^.5) / 12)^k + (4 + 6^.5) / 8 * ((2 + 76^.5) / 12)^k
+plot(0:26, rho, type="n")
+segments(0:26, 0, 0:26, rho)
+```
